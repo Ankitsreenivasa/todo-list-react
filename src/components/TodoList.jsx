@@ -10,7 +10,11 @@ function TodoList(props) {
             {props.item}
           </h2>
 
-          <button class="text-white bg-red-500 border-0 rounded-full py-2 px-8 focus:outline-none hover:bg-red-600 text-lg">
+          <button
+            onClick={(e)=>{
+                props.deleteItem(props.index)
+            }}
+           class="text-white bg-red-500 border-0 rounded-full py-2 px-8 focus:outline-none hover:bg-red-600 text-lg">
             X
           </button>
         </div>

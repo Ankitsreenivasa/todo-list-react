@@ -12,15 +12,22 @@ function App(props) {
     setlistTodo([...listTodo,inputText])
   }
 
+  const deleteListItem = (key)=>{
+    let newListTodo =[...listTodo]
+    newListTodo.splice(key,1)
+    setlistTodo([...newListTodo])
+  }
+
   return (
     <>
       <center>
         <Header />
         <TodoInput addList={addList} />
         <h1 className="text-3xl text-violet-400 font-semibold my-4"> TO DOs</h1>
+        <hr />
         {listTodo.map((listItem,i)=>{
           return(
-            <TodoList item={listItem}/>
+            <TodoList key={i} deleteItem={deleteListItem} index={i} item={listItem}/>
           )
         })}
         
