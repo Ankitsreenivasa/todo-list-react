@@ -6,7 +6,7 @@ function TodoList(props) {
     <>
       <section class="text-gray-400 bg-gray-900 body-font my-5">
         <div class="w-1/3 p-5 rounded-xl border border-violet-500">
-          <h2 class="text-white text-lg font-semibold title-font mb-5">
+          <h2 class="text-white text-xl font-semibold title-font mb-5">
             {props.item}
           </h2>
 
